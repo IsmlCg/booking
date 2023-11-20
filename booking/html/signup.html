@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Form with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Style required fields with red border and * */
+        .required-field {
+            position: relative;
+        }
+
+
+        .required-field label::after {
+            content: "*";
+            color: red;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container center-container">
+        <div class="col-3">
+            <h1 class="mb-3">Dental Clinic</h1>
+            <div class="card">
+              <div class="card-body">
+                  <h2 class="card-title mb-4">Signup Form</h2>
+                  <div id="loginMessage" class="mb-3"></div>
+                  <form>
+                      <div class="mb-3 required-field">
+                          <label for="firstName" class="form-label">First Name</label>
+                          <input type="text" class="form-control" id="firstName" name="firstName" required>
+                      </div>
+                      <div class="mb-3 required-field">
+                          <label for="lastName" class="form-label">Last Name</label>
+                          <input type="text" class="form-control" id="lastName" name="lastName" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="phone" class="form-label">Phone Number</label>
+                          <input type="tel" class="form-control" id="phone" name="phone">
+                      </div>
+                      <div class="mb-3 required-field">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" name="email" required>
+                      </div>
+                      <div class="mb-3 required-field">
+                          <label for="gender" class="form-label">Gender</label>
+                          <select class="form-select" id="gender" name="gender" required>
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="other">Other</option>
+                          </select>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign Up</button>
+                  </form>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

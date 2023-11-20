@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrative Panel for Appointment Reservations</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Admin Panel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reservations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Patients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content of the Admin Panel -->
+    <div class="container mt-5">
+        <h1>Welcome to the Admin Panel</h1>
+        <!-- Here you can add content and functionality, such as reservation tables, forms to add new appointments, etc. -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card" style="margin: 5px;">
+                <div class="card-body">
+                    <h5 class="card-title">Appointment Reminders</h5>
+                    <p class="card-text">A booking reminder is a friendly and helpful notification sent to patients or clients before a scheduled appointment, to remind them of the date and time. These reminders are an effective tool to reduce cancellation rates and ensure participants are well informed.</p>
+                    <a href="appointmentreminders" class="btn btn-primary">Go</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" style="margin: 5px;">
+                <div class="card-body">
+                    <h5 class="card-title">Schedule appointment</h5>
+                    <p class="card-text">Appointment bookings are scheduled arrangements between clients or patients and service providers for a specific period of time. They facilitate effective time and resource management, improve customer satisfaction, and reduce cancellation rates through appointment reminders.</p>
+                    <a href="main" class="btn btn-primary">Go</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card" style="margin: 5px;">
+                <div class="card-body">
+                    <h5 class="card-title">Patient Clinic Schedule</h5>
+                    <p class="card-text">A patient's hospital schedule lists the dates, times, and locations of the patient's medical or dental appointments. This helps manage appointments and ensures patients are well informed about healthcare options.</p>
+                    <a href="patientappointmentschedule" class="btn btn-primary">Go</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" style="margin: 5px;">
+                <div class="card-body">
+                    <h5 class="card-title">Credit Card Payment</h5>
+                    <p class="card-text">Payment by credit card is accepted for purchases and bank card payments. It offers convenience, security, and timely payment of purchases at low interest rates.</p>
+                    <a href="payment" class="btn btn-primary">Go</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link rel="stylesheet" type="text/css" href="/booking/css/main.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+</head>
+<body>
+  <div id='wrap' class="row">
+    <div class="col-1"></div>
+    <div class="col-6">
+          <h1 class="mb-3">Dental Clinic</h1> 
+        <div class="card">
+          <div class="card-body">
+              <h2 class="card-title mb-4">Schedule appointment</h2>
+              <div id="loginMessage" class="mb-3"></div>
+              <div class="mb-3">
+                  <label for="username" class="form-label">Reason</label>
+                  <select class="form-select" aria-label="Default select example">
+                      <option value="" disabled="">Select a reason</option>
+                      <option value="4">
+                        Adult Patient Check-Up (price is treatment dependent)
+                      </option>
+                      <option value="12">
+                        Emergency Appointment (price is treatment dependent)
+                      </option>
+                      <option value="13">
+                        Check-up Child (under 12. price is treatment dependent)
+                      </option>
+                      <option value="15">
+                        Check-up &amp; Scale &amp; polish- Adult (price varies depending on length)
+                      </option>
+                      <option value="16">
+                        Filling (price is treatment dependent)
+                      </option>
+                      <option value="18">
+                        Free facial aesthetics consultation
+                      </option>
+                      <option value="19">
+                        Free Invisalign consultation
+                      </option>
+                      <option value="0-21-418">
+                        Composite Bonding Consultation
+                      </option>
+                      <option value="0-22-418">
+                        Complimentary Implant consultation
+                      </option>
+                      <option value="0-23-418">
+                        Surgical extraction consultation
+                      </option>
+                      <option value="0-24-418">
+                        Perio Consultation
+                      </option>
+                </select>
+
+
+              </div>
+              <div class="mb-3">
+                  <label for="password" class="form-label">Provider</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Any Provider</option>
+                    <option value="1">Dr. Anna Camargo</option>
+                    <option value="2">Dr. Luis Ortega</option>
+                    <option value="3">Dental Surgeon John Nestor</option>
+                  </select>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                    <!-- Button on the left -->
+                    <button class="btn btn-secondary">Previous</button>
+                </div>
+                <div class="col-6 text-right">
+                    <!-- Button on the right -->
+                    <button class="btn btn-secondary">Next</button>
+                </div>
+              </div>
+              <div class="container mt-5">
+                <table id="tablaHorarios" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div class="mb-3">
+                    <button  onclick="redirectToPage()" class="btn btn-secondary">Save</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-3">
+        <h2 class="card-title mb-4">Appointment Events</h2>
+        <div class="card">
+        <div class="card-body">
+            
+            <div id="loginMessage" class="mb-3"></div>
+                <div class="mb-3"> 
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">My Event item</li>
+                        <li class="list-group-item">My Event second item</li>
+                        <li class="list-group-item">My Event third item</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <!-- Modal -->
+<div class="container mt-5">
+    <!-- El Modal -->
+    <div class="modal" id="appointment">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Encabezado del Modal -->
+                <div class="modal-header">
+                    <h4 class="modal-title">How would you prefer to receive this notice?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Contenido del Modal -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Notice in ?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked >
+                                <label class="form-check-label" for="flexCheckDefault" >
+                                    WhatsApp
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Text message
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Phone call
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                Email
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p>How much time in advance?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    48 hours
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    24 hours  
+                                </label>
+                            </div>
+                              
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Pie del Modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" >Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="booking/js/main.js"></script>
+    
+</body>
+</html>
+
+
